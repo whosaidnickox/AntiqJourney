@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oB9-pf-bqE">
+    <device id="retina6_72" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RubikOne-Regular.ttf">
+            <string>RubikOne-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Embeded View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="NavigationEmbededViewController" id="BYZ-38-t0r" customClass="NavigationEmbededViewController" customModule="AntiqJourney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainScreenBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="qPO-5s-0BF">
+                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainScreenLeftImage" translatesAutoresizingMaskIntoConstraints="NO" id="KgY-qQ-fsd">
+                                <rect key="frame" x="49" y="70" width="288" height="360"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KgY-qQ-fsd" secondAttribute="height" multiplier="4:5" id="QVc-Sm-DPK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIb-Uv-qqH">
+                                <rect key="frame" x="808" y="20" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="J9c-Zj-Nsf"/>
+                                    <constraint firstAttribute="height" constant="45" id="wnU-nL-gna"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="soundEnabled"/>
+                                <connections>
+                                    <action selector="soundGotClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1X-Nn-6Wk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVC-Wz-mRo">
+                                <rect key="frame" x="357.66666666666669" y="327" width="217.00000000000006" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="Jde-Uf-xBQ"/>
+                                    <constraint firstAttribute="width" constant="217" id="bWX-Bz-lgh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Play" backgroundImage="playButtonBack">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.31764705882352939" green="0.18431372549019609" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playGotPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UVe-KT-P44"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RVC-Wz-mRo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7tF-g0-AEY"/>
+                            <constraint firstItem="qPO-5s-0BF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ele-ht-XBJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RVC-Wz-mRo" secondAttribute="bottom" constant="20" id="L7D-a1-a6j"/>
+                            <constraint firstItem="mIb-Uv-qqH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="S8y-IN-65P"/>
+                            <constraint firstAttribute="trailing" secondItem="qPO-5s-0BF" secondAttribute="trailing" id="Z91-j2-pUT"/>
+                            <constraint firstItem="KgY-qQ-fsd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-10" id="dNW-QO-ihN"/>
+                            <constraint firstAttribute="bottom" secondItem="KgY-qQ-fsd" secondAttribute="bottom" id="e9C-v4-LT6"/>
+                            <constraint firstItem="KgY-qQ-fsd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="h8p-TH-ctQ"/>
+                            <constraint firstItem="qPO-5s-0BF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="opl-G9-nZv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mIb-Uv-qqH" secondAttribute="trailing" constant="20" id="u0N-JM-9vo"/>
+                            <constraint firstAttribute="bottom" secondItem="qPO-5s-0BF" secondAttribute="bottom" id="zCm-7R-2CI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9KB-dD-XVH"/>
+                    <connections>
+                        <outlet property="soundButton" destination="mIb-Uv-qqH" id="1nA-Oe-2vC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677" y="-2"/>
+        </scene>
+        <!--Game Screen View Controller-->
+        <scene sceneID="WXi-4k-8em">
+            <objects>
+                <viewController storyboardIdentifier="GameScreenViewController" id="oun-Ti-JdI" customClass="GameScreenViewController" customModule="AntiqJourney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KcL-fc-yeH">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameBackImage" translatesAutoresizingMaskIntoConstraints="NO" id="tDf-k5-0fA">
+                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuG-RS-dlz">
+                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topWallImage" translatesAutoresizingMaskIntoConstraints="NO" id="Oar-ar-Twb">
+                                        <rect key="frame" x="0.0" y="0.0" width="932" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gVu-08-kNk"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteLeftImage" translatesAutoresizingMaskIntoConstraints="NO" id="q0F-gj-xSm">
+                                        <rect key="frame" x="0.0" y="30" width="30" height="370"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="QRD-px-pfV"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteBaseImage" translatesAutoresizingMaskIntoConstraints="NO" id="1Jd-we-t7G">
+                                        <rect key="frame" x="0.0" y="400" width="211" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="211" id="3aB-8h-SuY"/>
+                                            <constraint firstAttribute="height" constant="30" id="LFo-7S-JEa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="middleBlackImage" translatesAutoresizingMaskIntoConstraints="NO" id="t3E-UV-KZh">
+                                        <rect key="frame" x="211" y="400" width="510" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="O4j-sI-GNK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteBaseImage" translatesAutoresizingMaskIntoConstraints="NO" id="AjC-Wy-QAf">
+                                        <rect key="frame" x="721" y="400" width="211" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="211" id="u8J-do-xc8"/>
+                                            <constraint firstAttribute="height" constant="30" id="wUW-8T-nUY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteLeftImage" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-3K-jEO">
+                                        <rect key="frame" x="902" y="30" width="30" height="370"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="7Xk-og-DSY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="targetImage" translatesAutoresizingMaskIntoConstraints="NO" id="Nvh-Fe-6Z8">
+                                        <rect key="frame" x="782" y="290" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="9Z5-Y4-eiq"/>
+                                            <constraint firstAttribute="width" constant="100" id="RUH-DJ-gY3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="baloonImage" translatesAutoresizingMaskIntoConstraints="NO" id="ULw-B0-fRk">
+                                        <rect key="frame" x="51" y="290" width="36" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="17"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iY9-3K-jEO" secondAttribute="trailing" id="3W6-Gn-323"/>
+                                    <constraint firstAttribute="trailing" secondItem="AjC-Wy-QAf" secondAttribute="trailing" id="5ei-MM-c65"/>
+                                    <constraint firstItem="1Jd-we-t7G" firstAttribute="leading" secondItem="JuG-RS-dlz" secondAttribute="leading" id="5xY-nW-veY"/>
+                                    <constraint firstItem="iY9-3K-jEO" firstAttribute="top" secondItem="Oar-ar-Twb" secondAttribute="bottom" id="BrD-ZU-1kH"/>
+                                    <constraint firstItem="t3E-UV-KZh" firstAttribute="leading" secondItem="1Jd-we-t7G" secondAttribute="trailing" id="CZ3-ax-n9N"/>
+                                    <constraint firstAttribute="bottom" secondItem="t3E-UV-KZh" secondAttribute="bottom" id="D8o-Jv-kRN"/>
+                                    <constraint firstItem="q0F-gj-xSm" firstAttribute="leading" secondItem="JuG-RS-dlz" secondAttribute="leading" id="Sqi-v7-UeT"/>
+                                    <constraint firstItem="AjC-Wy-QAf" firstAttribute="top" secondItem="iY9-3K-jEO" secondAttribute="bottom" id="TLm-tG-uRJ"/>
+                                    <constraint firstItem="Oar-ar-Twb" firstAttribute="top" secondItem="JuG-RS-dlz" secondAttribute="top" id="YbZ-TW-VRj"/>
+                                    <constraint firstAttribute="bottom" secondItem="AjC-Wy-QAf" secondAttribute="bottom" id="YyC-wX-k7F"/>
+                                    <constraint firstItem="AjC-Wy-QAf" firstAttribute="top" secondItem="Nvh-Fe-6Z8" secondAttribute="bottom" constant="10" id="aGq-rJ-iTJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oar-ar-Twb" secondAttribute="trailing" id="b5F-zB-94b"/>
+                                    <constraint firstItem="AjC-Wy-QAf" firstAttribute="leading" secondItem="t3E-UV-KZh" secondAttribute="trailing" id="cOa-SQ-GXT"/>
+                                    <constraint firstItem="q0F-gj-xSm" firstAttribute="top" secondItem="JuG-RS-dlz" secondAttribute="top" constant="30" id="chH-Ud-x6f"/>
+                                    <constraint firstItem="iY9-3K-jEO" firstAttribute="leading" secondItem="Nvh-Fe-6Z8" secondAttribute="trailing" constant="20" id="kK7-yb-zZM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oar-ar-Twb" secondAttribute="trailing" id="lNb-JI-gWn"/>
+                                    <constraint firstAttribute="bottom" secondItem="q0F-gj-xSm" secondAttribute="bottom" constant="30" id="ovd-dU-ok2"/>
+                                    <constraint firstItem="Oar-ar-Twb" firstAttribute="leading" secondItem="JuG-RS-dlz" secondAttribute="leading" id="vYd-Uj-6AQ"/>
+                                    <constraint firstItem="Oar-ar-Twb" firstAttribute="leading" secondItem="JuG-RS-dlz" secondAttribute="leading" id="w63-Vd-Eyq"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Jd-we-t7G" secondAttribute="bottom" id="xpf-W3-l73"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URu-kZ-dhW">
+                                <rect key="frame" x="99" y="40" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Nsp-b5-xx0"/>
+                                    <constraint firstAttribute="width" constant="45" id="xEB-gz-pKf"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="backButton"/>
+                                <connections>
+                                    <action selector="backTapped:" destination="oun-Ti-JdI" eventType="touchUpInside" id="Rjh-YE-mb8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKO-Wq-txx">
+                                <rect key="frame" x="847" y="40" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Cn2-Bq-PK6"/>
+                                    <constraint firstAttribute="width" constant="45" id="xGm-5D-IM6"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="retryButton"/>
+                                <connections>
+                                    <action selector="restartGameGotClicked:" destination="oun-Ti-JdI" eventType="touchUpInside" id="IJX-ka-mGq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kZI-oi-Qz1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JuG-RS-dlz" firstAttribute="leading" secondItem="KcL-fc-yeH" secondAttribute="leading" id="5RK-bl-bNB"/>
+                            <constraint firstAttribute="trailing" secondItem="vKO-Wq-txx" secondAttribute="trailing" constant="40" id="8bE-iF-Gxb"/>
+                            <constraint firstItem="tDf-k5-0fA" firstAttribute="top" secondItem="KcL-fc-yeH" secondAttribute="top" id="Dre-QA-VQE"/>
+                            <constraint firstItem="URu-kZ-dhW" firstAttribute="top" secondItem="KcL-fc-yeH" secondAttribute="topMargin" constant="40" id="KO7-Q3-p6P"/>
+                            <constraint firstAttribute="bottom" secondItem="JuG-RS-dlz" secondAttribute="bottom" id="MKG-IK-rwo"/>
+                            <constraint firstAttribute="trailing" secondItem="tDf-k5-0fA" secondAttribute="trailing" id="N6b-G2-IFB"/>
+                            <constraint firstItem="vKO-Wq-txx" firstAttribute="top" secondItem="kZI-oi-Qz1" secondAttribute="top" constant="40" id="PjN-TI-0hJ"/>
+                            <constraint firstAttribute="trailing" secondItem="JuG-RS-dlz" secondAttribute="trailing" id="W9R-jK-SUr"/>
+                            <constraint firstItem="URu-kZ-dhW" firstAttribute="leading" secondItem="KcL-fc-yeH" secondAttribute="leadingMargin" constant="20" id="cVE-iF-8YO"/>
+                            <constraint firstAttribute="bottom" secondItem="tDf-k5-0fA" secondAttribute="bottom" id="o0F-qX-t8Z"/>
+                            <constraint firstItem="tDf-k5-0fA" firstAttribute="leading" secondItem="KcL-fc-yeH" secondAttribute="leading" id="vgM-ab-NIq"/>
+                            <constraint firstItem="JuG-RS-dlz" firstAttribute="top" secondItem="kZI-oi-Qz1" secondAttribute="top" id="yGQ-sI-pGl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backGameSceneView" destination="JuG-RS-dlz" id="6lN-Ef-Da1"/>
+                        <outlet property="baloonBaseImageView" destination="1Jd-we-t7G" id="acc-Oa-KyM"/>
+                        <outlet property="baloonImageView" destination="ULw-B0-fRk" id="UUf-8Q-51B"/>
+                        <outlet property="leftImageView" destination="q0F-gj-xSm" id="DJj-st-asp"/>
+                        <outlet property="rightImageView" destination="iY9-3K-jEO" id="o6u-Fa-uKE"/>
+                        <outlet property="targetBaseImageView" destination="AjC-Wy-QAf" id="AED-Qg-kbf"/>
+                        <outlet property="targetImageView" destination="Nvh-Fe-6Z8" id="x2x-f3-VAI"/>
+                        <outletCollection property="blackImageViews" destination="Oar-ar-Twb" collectionClass="NSMutableArray" id="P3N-6r-NNv"/>
+                        <outletCollection property="blackImageViews" destination="t3E-UV-KZh" collectionClass="NSMutableArray" id="gD1-qu-Mts"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cb0-9u-0V5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676.60944206008583" y="694.88372093023258"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Z0e-Hs-uUZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="oB9-pf-bqE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fh4-if-gq6">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="92E-CJ-Cew"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3G-G5-r4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57.74647887323944" y="-2.2900763358778624"/>
+        </scene>
+        <!--Level Choices View Controller-->
+        <scene sceneID="JwN-Ak-lDw">
+            <objects>
+                <viewController storyboardIdentifier="LevelChoicesViewController" id="pqx-FN-AEI" customClass="LevelChoicesViewController" customModule="AntiqJourney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CA2-Q8-xtt">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainScreenBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="YCX-WK-Fwf">
+                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsc-Gj-XIa">
+                                <rect key="frame" x="808" y="20" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="IzC-yx-dYS"/>
+                                    <constraint firstAttribute="height" constant="45" id="JMg-oW-ckF"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="soundEnabled"/>
+                                <connections>
+                                    <action selector="soundGotTapped:" destination="pqx-FN-AEI" eventType="touchUpInside" id="lx2-ud-ciz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF6-SM-2By">
+                                <rect key="frame" x="79" y="20" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="HEt-Jo-xs0"/>
+                                    <constraint firstAttribute="height" constant="45" id="Z9n-pC-0ub"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="backButton"/>
+                                <connections>
+                                    <action selector="dismissViewGotClicked:" destination="pqx-FN-AEI" eventType="touchUpInside" id="rbq-VP-YCd"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H1P-H8-7E3">
+                                <rect key="frame" x="0.0" y="189" width="932" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cF3-rQ-Ano">
+                                        <rect key="frame" x="70" y="0.0" width="865" height="200"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BNd-sS-Bn2">
+                                                <rect key="frame" x="0.0" y="0.0" width="865" height="95"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WF-Di-6YM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="2WF-Di-6YM" secondAttribute="height" id="dxL-IL-xvh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="22"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="1" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="Los-Kq-ywX"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMb-pD-QGA">
+                                                        <rect key="frame" x="110" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="xMb-pD-QGA" secondAttribute="height" id="GLF-Vl-r4l"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="2" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="6ea-F2-dai"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVw-J3-cdC">
+                                                        <rect key="frame" x="220" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="vVw-J3-cdC" secondAttribute="height" id="ySW-EY-1zP"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="3" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="rmB-oG-jW3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eof-dB-QmW">
+                                                        <rect key="frame" x="330" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="eof-dB-QmW" secondAttribute="height" id="Y9d-pv-AYY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="4" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="Uxe-e3-4vr"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uwc-yS-soH">
+                                                        <rect key="frame" x="440" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Uwc-yS-soH" secondAttribute="height" id="VTk-L9-JK5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="5" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="V68-qX-2pP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tq4-rO-uYG">
+                                                        <rect key="frame" x="550" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="tq4-rO-uYG" secondAttribute="height" id="AwT-q7-2RN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="6" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="r0v-MQ-wrH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4u-FD-PVV">
+                                                        <rect key="frame" x="660" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="g4u-FD-PVV" secondAttribute="height" id="CwY-WD-3AV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="7" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="oJn-7H-7Pn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52K-74-wQf">
+                                                        <rect key="frame" x="770" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="52K-74-wQf" secondAttribute="height" id="STc-yZ-KBJ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="8" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="fV9-9q-9KJ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lVD-Jo-qAG">
+                                                <rect key="frame" x="0.0" y="105" width="865" height="95"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qp1-EQ-DqV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="qp1-EQ-DqV" secondAttribute="height" id="HQN-jf-UgD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="22"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="9" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="geI-gN-gVA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNh-Nx-SLy">
+                                                        <rect key="frame" x="110" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="cNh-Nx-SLy" secondAttribute="height" id="Uzv-73-CNk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="10" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="VBb-Bb-a3w"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNx-Hp-dwG">
+                                                        <rect key="frame" x="220" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="wNx-Hp-dwG" secondAttribute="height" id="pNJ-C5-dNt"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="11" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="Gv4-8X-w9d"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9u-o2-QWn">
+                                                        <rect key="frame" x="330" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="G9u-o2-QWn" secondAttribute="height" id="Uum-3u-GcC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="12" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="8SG-xQ-nWc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMY-X7-I1h">
+                                                        <rect key="frame" x="440" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="RMY-X7-I1h" secondAttribute="height" id="E6w-CX-UwM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="13" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="S9Z-NK-Q7D"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UH-bm-oAN">
+                                                        <rect key="frame" x="550" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="9UH-bm-oAN" secondAttribute="height" id="8g2-X7-8e9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="14" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="HSf-WV-cQB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLu-KG-T4v">
+                                                        <rect key="frame" x="660" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="pLu-KG-T4v" secondAttribute="height" id="GEl-Tt-fOm"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="15" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="PSo-HE-Wgw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-SP-ghZ">
+                                                        <rect key="frame" x="770" y="0.0" width="95" height="95"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="hTe-SP-ghZ" secondAttribute="height" id="5Cj-17-Rbl"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="23"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <size key="titleShadowOffset" width="2" height="2"/>
+                                                        <state key="normal" title="16" backgroundImage="lvlButtonBackImage">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="levelGotSelected:" destination="pqx-FN-AEI" eventType="touchUpInside" id="Vzl-NX-37h"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="0ej-AU-BQL"/>
+                                    <constraint firstItem="cF3-rQ-Ano" firstAttribute="top" secondItem="H1P-H8-7E3" secondAttribute="top" id="M1G-M1-qhp"/>
+                                    <constraint firstItem="cF3-rQ-Ano" firstAttribute="height" secondItem="H1P-H8-7E3" secondAttribute="height" id="bNT-Js-FpH"/>
+                                    <constraint firstAttribute="trailing" secondItem="cF3-rQ-Ano" secondAttribute="trailing" constant="70" id="beG-lP-p9T"/>
+                                    <constraint firstAttribute="bottom" secondItem="cF3-rQ-Ano" secondAttribute="bottom" id="ioa-If-jop"/>
+                                    <constraint firstItem="cF3-rQ-Ano" firstAttribute="leading" secondItem="H1P-H8-7E3" secondAttribute="leading" constant="70" id="k7g-XS-6XG"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Bf-GM-K10"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gsc-Gj-XIa" firstAttribute="top" secondItem="6Bf-GM-K10" secondAttribute="top" constant="20" id="E5y-fO-Crs"/>
+                            <constraint firstItem="YCX-WK-Fwf" firstAttribute="leading" secondItem="CA2-Q8-xtt" secondAttribute="leading" id="Gzn-Ju-g67"/>
+                            <constraint firstItem="6Bf-GM-K10" firstAttribute="bottom" secondItem="H1P-H8-7E3" secondAttribute="bottom" constant="20" id="RYA-yI-JZW"/>
+                            <constraint firstItem="lF6-SM-2By" firstAttribute="top" secondItem="6Bf-GM-K10" secondAttribute="top" constant="20" id="U1P-97-nK8"/>
+                            <constraint firstItem="H1P-H8-7E3" firstAttribute="leading" secondItem="CA2-Q8-xtt" secondAttribute="leading" id="eiD-K7-wYX"/>
+                            <constraint firstAttribute="bottom" secondItem="YCX-WK-Fwf" secondAttribute="bottom" id="h0f-Im-cKT"/>
+                            <constraint firstAttribute="trailing" secondItem="YCX-WK-Fwf" secondAttribute="trailing" id="lOU-mX-ATZ"/>
+                            <constraint firstItem="lF6-SM-2By" firstAttribute="leading" secondItem="6Bf-GM-K10" secondAttribute="leading" constant="20" id="mB5-OJ-QWC"/>
+                            <constraint firstAttribute="trailing" secondItem="H1P-H8-7E3" secondAttribute="trailing" id="okX-X0-blo"/>
+                            <constraint firstItem="YCX-WK-Fwf" firstAttribute="top" secondItem="CA2-Q8-xtt" secondAttribute="top" id="qTS-Xl-32O"/>
+                            <constraint firstItem="6Bf-GM-K10" firstAttribute="trailing" secondItem="gsc-Gj-XIa" secondAttribute="trailing" constant="20" id="s2l-2J-51l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jOn-hO-KKr"/>
+                    <connections>
+                        <outlet property="soundButtonOutlet" destination="gsc-Gj-XIa" id="2La-u6-5mZ"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="2WF-Di-6YM" collectionClass="NSMutableArray" id="7DA-qO-Ovf"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="xMb-pD-QGA" collectionClass="NSMutableArray" id="Cep-iX-7ud"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="vVw-J3-cdC" collectionClass="NSMutableArray" id="1ez-hj-nou"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="eof-dB-QmW" collectionClass="NSMutableArray" id="UCU-Q0-XUq"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="Uwc-yS-soH" collectionClass="NSMutableArray" id="5LL-mK-hMU"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="tq4-rO-uYG" collectionClass="NSMutableArray" id="vS2-av-w4K"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="g4u-FD-PVV" collectionClass="NSMutableArray" id="Zva-50-Oy0"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="52K-74-wQf" collectionClass="NSMutableArray" id="FK3-pK-mYl"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="qp1-EQ-DqV" collectionClass="NSMutableArray" id="hil-Vv-5gX"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="cNh-Nx-SLy" collectionClass="NSMutableArray" id="60O-sx-fCK"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="wNx-Hp-dwG" collectionClass="NSMutableArray" id="IWE-4n-Cnx"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="G9u-o2-QWn" collectionClass="NSMutableArray" id="7uM-gE-M0b"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="RMY-X7-I1h" collectionClass="NSMutableArray" id="shR-EA-rQR"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="9UH-bm-oAN" collectionClass="NSMutableArray" id="ntc-K5-dEG"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="pLu-KG-T4v" collectionClass="NSMutableArray" id="RBo-ui-NxE"/>
+                        <outletCollection property="levelButtonsOutletCollection" destination="hTe-SP-ghZ" collectionClass="NSMutableArray" id="GEh-2o-wEP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4z-1L-cb9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308.4507042253522" y="-2.2900763358778624"/>
+        </scene>
+        <!--Completion Status View Controller-->
+        <scene sceneID="Z2S-qL-4Tz">
+            <objects>
+                <viewController storyboardIdentifier="CompletionStatusViewController" id="2Bh-XE-Qax" customClass="CompletionStatusViewController" customModule="AntiqJourney" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DtT-hD-F96">
+                        <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameOverBack" translatesAutoresizingMaskIntoConstraints="NO" id="4qw-r4-8YR">
+                                <rect key="frame" x="0.0" y="0.0" width="932" height="430"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwH-zX-Xf1">
+                                <rect key="frame" x="248.66666666666666" y="50" width="434.66666666666674" height="309"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="completionAlertBack" translatesAutoresizingMaskIntoConstraints="NO" id="eN0-x3-TTL">
+                                        <rect key="frame" x="0.0" y="0.0" width="434.66666666666669" height="309"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HHb-wc-Lhw">
+                                        <rect key="frame" x="30.000000000000028" y="30" width="374.66666666666674" height="249"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Competed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igp-9y-SG6">
+                                                <rect key="frame" x="81.999999999999986" y="0.0" width="210.66666666666663" height="55.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.31764705882352939" green="0.18431372549019609" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="2" height="1"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miP-Ut-mx5">
+                                                <rect key="frame" x="40" y="70.333333333333343" width="294.66666666666669" height="73.666666666666657"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="miP-Ut-mx5" secondAttribute="height" multiplier="184:46" id="yfz-Iz-cz4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="22"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="Next Level" backgroundImage="greenButton">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="firstButtonGotClicked:" destination="2Bh-XE-Qax" eventType="touchUpInside" id="zT5-Hf-kjl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsC-kU-saz">
+                                                <rect key="frame" x="69.999999999999986" y="159" width="234.66666666666663" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="wsC-kU-saz" secondAttribute="height" multiplier="120:46" id="RED-tM-jGL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="RubikOne-Regular" family="Rubik One" pointSize="22"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <size key="titleShadowOffset" width="2" height="2"/>
+                                                <state key="normal" title="Exit" backgroundImage="exitButton">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" red="0.31764705879999999" green="0.1843137255" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="exitGotPressed:" destination="2Bh-XE-Qax" eventType="touchUpInside" id="AZx-XA-a1O"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wsC-kU-saz" firstAttribute="leading" secondItem="HHb-wc-Lhw" secondAttribute="leading" constant="70" id="TMv-fU-4Ji"/>
+                                            <constraint firstAttribute="trailing" secondItem="wsC-kU-saz" secondAttribute="trailing" constant="70" id="aYG-4i-t68"/>
+                                            <constraint firstAttribute="trailing" secondItem="miP-Ut-mx5" secondAttribute="trailing" constant="40" id="whe-zl-McM"/>
+                                            <constraint firstItem="miP-Ut-mx5" firstAttribute="leading" secondItem="HHb-wc-Lhw" secondAttribute="leading" constant="40" id="xdm-r0-Hx2"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HHb-wc-Lhw" firstAttribute="top" secondItem="dwH-zX-Xf1" secondAttribute="top" constant="30" id="7RT-HF-JYF"/>
+                                    <constraint firstItem="eN0-x3-TTL" firstAttribute="top" secondItem="dwH-zX-Xf1" secondAttribute="top" id="8VL-yg-dGg"/>
+                                    <constraint firstItem="HHb-wc-Lhw" firstAttribute="leading" secondItem="dwH-zX-Xf1" secondAttribute="leading" constant="30" id="9t1-Uu-3yf"/>
+                                    <constraint firstAttribute="bottom" secondItem="eN0-x3-TTL" secondAttribute="bottom" id="GCq-gs-w3o"/>
+                                    <constraint firstAttribute="width" secondItem="dwH-zX-Xf1" secondAttribute="height" multiplier="273:194" id="QGI-Kt-0cK"/>
+                                    <constraint firstItem="eN0-x3-TTL" firstAttribute="leading" secondItem="dwH-zX-Xf1" secondAttribute="leading" id="SMb-DS-cNP"/>
+                                    <constraint firstAttribute="trailing" secondItem="eN0-x3-TTL" secondAttribute="trailing" id="ZSQ-cr-iuH"/>
+                                    <constraint firstAttribute="bottom" secondItem="HHb-wc-Lhw" secondAttribute="bottom" constant="30" id="geL-TO-S2X"/>
+                                    <constraint firstAttribute="trailing" secondItem="HHb-wc-Lhw" secondAttribute="trailing" constant="30" id="ibw-Fp-wIj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ewu-Rp-P2e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4qw-r4-8YR" secondAttribute="trailing" id="1GE-tK-lMJ"/>
+                            <constraint firstAttribute="bottom" secondItem="4qw-r4-8YR" secondAttribute="bottom" id="2bc-Uw-fa1"/>
+                            <constraint firstItem="dwH-zX-Xf1" firstAttribute="centerX" secondItem="DtT-hD-F96" secondAttribute="centerX" id="FSa-sw-6X1"/>
+                            <constraint firstItem="ewu-Rp-P2e" firstAttribute="bottom" secondItem="dwH-zX-Xf1" secondAttribute="bottom" constant="50" id="OpL-9y-W3g"/>
+                            <constraint firstItem="4qw-r4-8YR" firstAttribute="leading" secondItem="DtT-hD-F96" secondAttribute="leading" id="YxL-km-vYq"/>
+                            <constraint firstItem="4qw-r4-8YR" firstAttribute="top" secondItem="DtT-hD-F96" secondAttribute="top" id="dgB-PE-gAA"/>
+                            <constraint firstItem="dwH-zX-Xf1" firstAttribute="top" secondItem="ewu-Rp-P2e" secondAttribute="top" constant="50" id="o7P-8E-Yub"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstButtonOutlet" destination="miP-Ut-mx5" id="amw-um-m9S"/>
+                        <outlet property="titleLabel" destination="igp-9y-SG6" id="Med-5c-0IS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cau-QD-cTJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1307.5107296137339" y="694.88372093023258"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="156" height="168"/>
+        <image name="baloonImage" width="60" height="100"/>
+        <image name="completionAlertBack" width="744" height="456"/>
+        <image name="exitButton" width="480" height="200"/>
+        <image name="gameBackImage" width="2532" height="1170"/>
+        <image name="gameOverBack" width="1688" height="780"/>
+        <image name="greenButton" width="552" height="150"/>
+        <image name="lvlButtonBackImage" width="255" height="267"/>
+        <image name="mainScreenBackgroundImage" width="2532" height="1170"/>
+        <image name="mainScreenLeftImage" width="792" height="1086"/>
+        <image name="middleBlackImage" width="1266" height="72"/>
+        <image name="playButtonBack" width="651" height="198"/>
+        <image name="retryButton" width="156" height="168"/>
+        <image name="soundEnabled" width="156" height="168"/>
+        <image name="targetImage" width="300" height="300"/>
+        <image name="topWallImage" width="2532" height="72"/>
+        <image name="whiteBaseImage" width="633" height="72"/>
+        <image name="whiteLeftImage" width="72" height="1035"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
